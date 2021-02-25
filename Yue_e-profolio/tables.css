@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML and CSS, 8th Edition
+   Tutorial 6
+   Case Problem 2
+
+   Calendar Style Sheet
+   Author: Lewis Kern
+   Date:   2018-03-01
+
+   Filename:   lht_tables.css
+
+*/
+
+/* ===============================
+   Mobile Styles: 0px to 640px 
+   ===============================
+*/
+@media only screen and (max-width: 640px) {
+
+table, tbody, tr, td, th, caption {
+   display: block;
+}
+
+thead, h1 {
+   display: none;
+}
+   
+caption {
+   color: white;
+   background: rgb(51, 51, 51);
+   font-size: 1.5em;
+   line-height: 2em;
+   text-align: center;
+}
+table.summary td{
+   color:rgb(194, 31, 31);
+   padding:3%;
+   text-align: left;
+
+}
+table.content td:first-child{
+   color: rgb(28, 159, 219); 
+   font-size: 1.2em;
+}
+
+
+td {
+   border: 1px dotted gray;
+   color: rgb(11, 12, 145);       
+   position: relative;
+   min-height: 40px;
+   text-align: center;
+   padding-top: 5%;
+}
+td li{
+   margin:10px;
+}
+
+
+
+   
+}
+
+
+/* =============================================
+Tablet and Desktop Styles: greater than 640px
+=============================================
+*/
+@media only screen and (min-width: 641px) {
+
+/* Table Styles */
+
+
+table {
+  
+   border: 2px solid rgb(0, 0, 0);
+   border-collapse: collapse; 
+   margin: 20px auto;
+   table-layout: fixed;   
+   width: 85%;
+   background-color:white;
+  
+}
+
+h1#resumetitle{
+   line-height: 2.5em;
+   text-align: center;
+   font-size: 2.5em; 
+   letter-spacing: 3px;
+   color:rgb(0, 0, 0);
+}
+
+
+th, td { 
+   border: 1px solid gray;
+   font-size: 0.85em;
+   font-weight: normal;
+   padding: 5px;
+   vertical-align: center;
+   width: 14.28%;
+   word-wrap: break-word;
+   text-align: center;
+   
+}
+
+table.summary td{
+   text-align: left;
+}
+
+td {
+   color: rgb(11, 12, 145);     
+   background: rgba(171, 171, 171, 0.6);
+}
+table li{
+   margin:10px;
+}
+/* Caption Styles */
+
+caption {
+   font-family: 'Courier New', Courier, monospace;
+   text-align: center;
+   font-size: 1.5em; 
+   letter-spacing: 3px;
+   font-style: initial;
+   background-color:rgb(28, 159, 219); 
+   color:white;
+   padding-top: 1em;
+   padding-bottom:  1em;
+   border: 2px solid rgb(0, 0, 0);
+   border-bottom: 0;
+}
+
+
+
+/* Table Header Styles */
+
+table thead th {
+   color:white;
+   background-color:rgb(28, 159, 219); 
+}
+
+}

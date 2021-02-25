@@ -1,0 +1,246 @@
+@charset "utf-8";
+
+/* HTML and Body Styles */
+
+html {
+   background: url(background2.jpg) center center / cover no-repeat fixed;
+   height: 100%;
+   font-family: Verdana, Geneva, sans-serif;
+   font-size: 12px;
+}
+
+body {
+   background: rgb(134, 176, 232);   
+   box-shadow: rgb(51, 51, 51) 5px 0px 15px,
+               rgb(51, 51, 51) -5px 0px 15px;
+   margin: 0px auto;
+   min-height: 100%;
+   min-width: 320px;
+   max-width: 1024px;
+   width: 100%;
+}
+
+/* Body Header Styles */
+
+
+
+body header>img {
+   display: block;
+   width: 100%;
+}
+
+/* Horizonal Navigation Styles */
+header nav{
+   text-align: center;
+   background:rgb(134,176,232); 
+  
+}
+header nav ul{
+   display: inline-block;
+   
+  }
+header nav ul li {
+   float:left;
+   font-size: 2em;
+   line-height: 2.5em;
+}
+
+
+
+header nav ul li a {
+   color: white;
+   display: block;
+   padding: 5px 20px;
+   width: 100%;
+    
+}
+
+header nav ul li a:hover {
+   color: rgb(11, 12, 145);
+}
+
+a#navicon {
+   display: none;
+}
+
+
+/* Section Styles */
+
+section {
+   background-color: rgb(207, 222, 172);
+   clear: both;
+}
+
+section::after{
+   content: "";
+   display: table;
+   clear: both;
+}
+
+section img {
+   display: block;
+   width: 100%;
+}
+
+section p {
+   line-height: 2em;
+   padding: 10px;
+   font-size: 1.5em;
+}
+article{
+   display: block;
+   padding-top: 10px;
+}
+article p{
+   line-height: 2.5em;
+   padding: 10px;
+   font-size: 2em;
+
+}
+article h1{
+   font-size:2.5em;
+   text-align: center;
+}
+/* Aside Styles */
+
+aside {
+   display: block;
+   background-color: rgb(181, 204, 136);
+}
+aside h1{
+   font-size:2.5em;
+   color:white;
+   background-color : black;
+   text-shadow : rgba(255,255,255,0.5) 0 5px 6px, rgba(255,255,255,0.2) 1px 3px 3px;
+   text-align: center;
+   line-height: 3em;}
+
+aside ul{
+display: flex;
+flex-flow: column;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+aside li{
+   flex:1 1 150px;
+   font-size: 1.7em;
+   letter-spacing:4px;
+   line-height: 2.2em;
+   margin-left: 5%;
+
+}
+/* Footer Styles */
+
+footer {
+   clear: both;
+   background-color: rgb(117, 140, 72);
+   font-size: 1.4em;
+   text-align: center;
+   padding:5%;
+  
+}
+
+/* Pulldown Menu Styles */
+
+ul.submenu {
+   display: none;
+}
+
+a.submenuTitle:hover+ul.submenu, ul.submenu:hover {
+   display: block;
+}
+
+/* New Styles Added Below */
+
+/* ===============================
+   Mobile Styles: 0px to 480px
+   ===============================
+*/
+@media only screen and (max-width: 480px) {
+
+   a#navicon {
+      display: block;
+   }
+   
+   header nav ul {
+      display: none;
+   
+   }
+   
+   header nav ul li {
+      display: block;
+      font-size: 1.5em;
+      line-height: 1.7em;
+      height: 1.7em;
+      width:100%;
+      
+   }
+   
+   a#navicon:hover+ul, header nav ul:hover {
+      display: block;
+   }
+
+ 
+   aside {
+      display: none;
+   } 
+   
+   section table td{
+      color:rgb(250, 83, 6)
+   }
+}
+
+/* ================================
+   Tablet Styles: 481px and greater
+   ================================
+*/
+@media only screen and (min-width: 481px) {
+
+   ul.mainmenu > li {
+      float: left;
+      position: relative;
+      width: 20%;
+   }
+
+   ul.submenu {
+      box-shadow: rgb(51, 51, 51) 5px 5px 15px;
+      position: absolute;
+      width: 200%;
+   }
+}
+
+/* =================================
+   Desktop Styles: 769px and greater
+   =================================
+*/
+@media only screen and (min-width: 769px) {
+
+   ul.submenu {
+      background: transparent;
+      box-shadow: none;
+      display: block;
+      position: relative;
+      width: 100%;
+   }
+   
+   nav.horizontal::after {
+      clear: both;
+      content: "";
+      display: table;
+   } 
+   
+   nav.horizontal a.submenuTitle {
+      display: none;
+   }  
+   
+   article {
+      float: left;
+      margin-right: 5%;
+      width: 55%;
+   }
+   aside {
+      float: left;
+      width: 40%;
+   }   
+}
+

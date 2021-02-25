@@ -1,0 +1,188 @@
+@charset "utf-8";
+/* HTML and Body Styles */
+
+html {
+   background: url(background2.jpg) center center / cover no-repeat fixed;
+   height: 100%;
+   font-family: Verdana, Geneva, sans-serif;
+   font-size: 12px;
+}
+
+body {
+   background: rgb(134, 176, 232);   
+   box-shadow: rgb(51, 51, 51) 5px 0px 15px,
+               rgb(51, 51, 51) -5px 0px 15px;
+   margin: 0px auto;
+   min-height: 100%;
+   min-width: 320px;
+   max-width: 1024px;
+   width: 100%;
+  
+}
+
+/* Body Header Styles */
+
+
+
+body header>img {
+   display: block;
+   width: 100%;
+}
+
+/* Horizonal Navigation Styles */
+header nav{
+   text-align: center;
+   background:rgb(134,176,232); 
+  
+}
+header nav ul{
+   display: inline-block;
+   
+  }
+header nav ul li {
+   float:left;
+   font-size: 2em;
+   line-height: 2.5em;
+}
+
+
+
+header nav ul li a {
+   color: white;
+   display: block;
+   padding: 5px 20px;
+   width: 100%;
+    
+}
+
+header nav ul li a:hover {
+   color: rgb(11, 12, 145);
+}
+
+a#navicon {
+   display: none;
+}
+
+
+/* Section Styles */
+
+section {
+   background-color: rgb(207, 222, 172);
+
+   display: block;
+
+}
+
+article{
+   display: block;
+  
+   
+   background-color: rgb(207, 222, 172);
+   min-height: 100vh;
+  
+}
+
+
+article h1{
+   font-size:2.5em;
+   text-align: center;
+}
+
+/* Footer Styles */
+
+footer {
+   background-color: rgb(117, 140, 72);
+   font-size: 1.4em;
+   text-align: center;
+   padding:5%;
+  
+}
+
+/* Pulldown Menu Styles */
+
+ul.submenu {
+   display: none;
+}
+
+a.submenuTitle:hover+ul.submenu, ul.submenu:hover {
+   display: block;
+}
+
+/* New Styles Added Below */
+
+/* ===============================
+   Mobile Styles: 0px to 480px
+   ===============================
+*/
+@media only screen and (max-width: 480px) {
+  
+   a#navicon {
+      display: block;
+   }
+   
+   header nav ul {
+      display: none;
+   
+   }
+   
+   header nav ul li {
+      display: block;
+      font-size: 1.5em;
+      line-height: 1.7em;
+      height: 1.7em;
+      width:100%;
+      background-color:rgb(134,176,232); ;
+   }
+   
+   a#navicon:hover+ul, header nav ul:hover {
+      display: block;
+   }
+
+}
+
+/* ================================
+   Tablet Styles: 481px and greater
+   ================================
+*/
+@media only screen and (min-width: 481px) {
+
+   ul.mainmenu > li {
+      float: left;
+      position: relative;
+      width: 20%;
+   }
+
+   ul.submenu {
+      box-shadow: rgb(51, 51, 51) 5px 5px 15px;
+      position: absolute;
+      width: 200%;
+   }
+}
+
+/* =================================
+   Desktop Styles: 769px and greater
+   =================================
+*/
+@media only screen and (min-width: 769px) {
+
+   ul.submenu {
+      background: transparent;
+      box-shadow: none;
+      display: block;
+      position: relative;
+      width: 100%;
+   }
+   
+   nav.horizontal::after {
+      clear: both;
+      content: "";
+      display: table;
+   } 
+   
+   nav.horizontal a.submenuTitle {
+      display: none;
+   }  
+   
+
+}
+
